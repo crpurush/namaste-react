@@ -1,0 +1,27 @@
+syntax React.createElement(tag,{attributes},child);  
+
+const heading = React.createElement("h1",{id:"heading"},"Hello world in React");
+console.log(heading);//heading is react element i.e., JS object
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(heading);
+----------------------------------------------------------------------------------------------------------
+-> React.createElement("h1",{id:"heading"},"Hello world in React");  
+
+//here heading is react element i.e., JS object 
+{id:"heading", abc:"xyz"} - in this object we can add multiple attributes for the tag
+----------------------------------------------------------------------------------------------------------
+ 
+-> root.render(heading); //this render method converting object to html tag
+// ReactElement (Object) => HTML  (Browser understands)
+
+ <div id="root">
+        <h1>Initial h1 tag</h1>
+    </div>
+//This h1 will be replaced from  App.js when we use root.render(heading);
+
+----------------------------------------------------------------------------------------------------------
+<h1>Hello Top of root</h1>
+<div id="root"></div>
+<h1>Hello bottom of root</h1>
+//only content inside id:root will be replaced by React not others
+---------------------------------------------------------------------------------------------------------
