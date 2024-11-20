@@ -22,5 +22,11 @@ transitive dependencies
 if we have package.json and package-lock.json we can regenerate all our node_modules folders, so no need to push node_modules to github
 using npm install - it will do so
 ==========================================
+npx parcel index.html
+for igniting app
+
+npm -> command used for installing package
+npx parcel -> command used for executing package i.e., here executing parcel package
+npx parcel index.html -> from index.html it takes as source and builds the app, deploys to localhost
 
 
