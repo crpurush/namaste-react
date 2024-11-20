@@ -1,0 +1,22 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "\"Namaste React practice\"",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crpurush/namaste-react.git"
+  },
+  "author": "Reddy Purushotham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crpurush/namaste-react/issues"
+  },
+  "homepage": "https://github.com/crpurush/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.13.0"
+  }
+}
