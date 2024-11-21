@@ -1,5 +1,3 @@
-
-```markdown
 # Namaste React Notes - Episode 2
 
 ## 1. npm & Package Manager Basics
@@ -9,7 +7,7 @@
 - **Install** a bundler for dev:
   ```bash
   npm install -D parcel
-  ```
+
   - **`-D`**: Installs as a **dev dependency** (used only in development).
   - **Normal dependencies**: Required for production too.
 
