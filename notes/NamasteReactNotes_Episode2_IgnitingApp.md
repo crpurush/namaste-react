@@ -110,10 +110,6 @@
 | `npx parcel build index.html`| Create production build in `dist/`.    |
 
 ---
-Here’s a properly formatted **"Don't Forget"** section to ensure it renders correctly on GitHub:
-
----
-
 ### **Don't Forget** 📝
 
 1. **Use `.gitignore`**:
