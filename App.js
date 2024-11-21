@@ -1,7 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement("h1",{id:"heading",xyz:"abc"},"Hello world in React using parcel");
-console.log(heading);//heading is react element i.e., JS object
+const heading = (<h1 id="heading" tabIndex="2"
+className="Heading">
+    Namaste React using JSX
+</h1>);
+console.log(heading);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(heading);
