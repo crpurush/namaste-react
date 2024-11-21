@@ -1,4 +1,3 @@
-Here’s the same content formatted in a code-friendly markdown format to ensure it displays correctly when pasted into VS Code or any markdown editor:
 
 ```markdown
 # Namaste React Notes - Episode 2
@@ -24,7 +23,11 @@ Here’s the same content formatted in a code-friendly markdown format to ensure
 
 ## 3. Dependencies & Transitive Dependencies
 - **Transitive dependencies**: Dependencies of dependencies (e.g., `parcel` → has its own dependencies).
-- `npm install -D parcel`: Installs `parcel` and all its transitive dependencies into the **node_modules** folder.
+- Run:
+  ```bash
+  npm install -D parcel
+  ```
+  - Installs `parcel` and all its transitive dependencies into the **node_modules** folder.
 
 ---
 
@@ -101,16 +104,11 @@ Here’s the same content formatted in a code-friendly markdown format to ensure
 ---
 
 ## Quick Commands Summary
-| **Command**               | **Purpose**                             |
-|---------------------------|-----------------------------------------|
-| `npm install`             | Install all dependencies.              |
-| `npm install -D parcel`   | Install parcel as dev dependency.      |
-| `npx parcel index.html`   | Build & deploy app locally.            |
-| `npx parcel build index.html` | Create production build in `dist/`. |
+| **Command**                  | **Purpose**                             |
+|------------------------------|-----------------------------------------|
+| `npm install`                | Install all dependencies.              |
+| `npm install -D parcel`      | Install parcel as dev dependency.      |
+| `npx parcel index.html`      | Build & deploy app locally.            |
+| `npx parcel build index.html`| Create production build in `dist/`.    |
 
 ---
-
-Feel free to push these notes to GitHub! 🚀
-```
-
-This format is optimized for markdown rendering and will work perfectly in VS Code or similar environments.
