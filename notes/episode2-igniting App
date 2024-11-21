@@ -1,0 +1,59 @@
+# npm is package manager, these packages are also known as dependencies sometimes
+# package.json is configuration for npm
+# Most important package in project is bundler
+# Bundler bundles/packages the app with all files to production deployment ex:webpack,veet,parcel
+# npm install -D parcel
+2 types of dependencies
+->dev dependency - required in development phase
+->normal dependency  - used in production also
+-D - for developement purpose
+
+===================
+in package.json
+^2.13.0 - ^ upgrades the minor version
+~ - upgrades the major version
+===================
+transitive dependencies
+- our project has a dependency on parcel and parcel has some dependencies of it, those dependencies have other dependencies. we call them as transitive dependencies.
+- on npm install -D parcel, it installs all dependenciesor packages code from global npm repository into node_modules folder in local
+====================
+.gitignore file is used to keep list of files not to be added to git
+
+if we have package.json and package-lock.json we can regenerate all our node_modules folders, so no need to push node_modules to github
+using npm install - it will do so
+==========================================
+npx parcel index.html
+for igniting app
+
+npm -> command used for installing package
+npx parcel -> command used for executing package i.e., here executing parcel package
+npx parcel index.html -> from index.html it takes as source and builds the app, deploys to localhost
+============================================
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+Using CDN links to inject React into project is not preferred way.
+for reasons
+-> separate network call is used
+->here react@18 is pointed, if version changed url to be changed
+Recommended and preferred way is to use "npm install react"
+"npm i" is short form for "npm install"
+npm install react
+npm install react-dom
+=================================================
+after installing from npm, using import we have to bring React code from node_modules
+import React from "react"; //"react" is from node_modules react folder
+import ReactDOM from "react-dom"; //"react-dom" is from node_modules react folder
+now ReactDOM is from react-dom/client if not used warning is thrown
+<script src="./App.js"></script> will treat App.js as broswer script file, but as imports are used it should be module type
+so, <script type="module" src="./App.js"></script>
+=================================================
+NOTE:
+npx parcel build index.html - for production ready build -> creates files in "dist" folder
+it throws error because of  "main": "App.js", in package.json -> npm treats it as starting point
+and parcel treats index.html given in "npx parcel build index.html" as entry point, it will be conflicting.
+so, need to DELETE "main": "App.js" in package.json
+=================================================
+npx parcel index.html -> will regenerate folders dist and parcel-cache, so to be added to .gitignore
+
+browserlist library - to handle for browsers (in packaage.json its configured) (https://browserslist.dev/)
+=================================================

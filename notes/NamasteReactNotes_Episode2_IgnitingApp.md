@@ -110,3 +110,21 @@
 | `npx parcel build index.html`| Create production build in `dist/`.    |
 
 ---
+Don't Forget 📝
+Use .gitignore:
+
+Add node_modules, dist, and parcel-cache to .gitignore.
+These folders are not needed in version control because they can be regenerated.
+Versioning Rules in package.json:
+
+^: Updates minor versions.
+~: Updates patch versions.
+Use npm for Dependencies:
+
+Prefer npm install over CDNs for React and ReactDOM to avoid issues with network calls and manual updates.
+Conflicts with main in package.json:
+
+Remove "main": "App.js" in package.json to avoid errors when using parcel build.
+Parcel Cache:
+
+parcel generates dist and parcel-cache folders. Always add these to .gitignore.
