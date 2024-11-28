@@ -1,0 +1,133 @@
+passing props to component
+==========================
+for dynamically to use data in component
+we will pass props from component -> it is passing arguments(props) to js function(component)
+- props is js object
+
+<RestaurantCard restaurantName="Meghana Foods" cusine="Biryani, North Indian, Asian"/>
+
+const RestaurantCard = (props) => {
+    return (
+        <div className="restaurant-card">
+            <h3 className="restaurant-name">{props.restaurantName}</h3>
+            <h4>{props.cusine}</h4>
+        </div>
+    )
+}
+we can use other name also instead of props, its a JS object
+---> other way to pass is by destructuring props object on the fly
+
+const RestaurantCard = ({restaurantName, cusine}) => {
+    return (
+        <div className="restaurant-card">
+            <h3 className="restaurant-name">{restaurantName}</h3>
+            <h4>{cusine}</h4>
+        </div>
+    )
+}
+==========================
+json viewer chrome extension to see json data from network calls cleanly
+
+
+config driven UI - for system driven interviews
+config will be from backend
+
+
+
+
+
+######### passing Data as JSON #########
+const RestaurantCard = (props) => {
+    const {restaurantData} = props;
+    return (
+        <div className="restaurant-card">
+            <h3 className="restaurant-name">{restaurantData.restaurantName}</h3>
+            <h4>{restaurantData.cusine}</h4>
+        </div>
+    )
+}
+
+const restaurantDataJson = {
+    restaurantName : "Meghana Foods",
+    cusine : "Biryani, North Indian, Asian"
+}
+
+const Body = () => {
+    return (
+        <div className="body">
+            <div className="search">Search</div>
+            <div className="restaurant-container">
+                <RestaurantCard restaurantData = {restaurantDataJson} />
+            </div>
+        </div>
+    )
+}
+here restaurantDataJson is js obj and is wrapped into other object while passing, so destructuring in component
+
+--------> other way 1
+const RestaurantCard = (props) => {
+    return (
+        <div className="restaurant-card">
+            <img className="restaurant-logo"
+            alt="restaurant-logo"
+            src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/gp1ityra6utvzqn6ghnv"
+            ></img>
+            <h3 className="restaurant-name">{props.restaurantName}</h3>
+            <h4>{props.cusine}</h4>
+        </div>
+    )
+}
+
+const restaurantDataJson = {
+    restaurantName : "Meghana Foods",
+    cusine : "Biryani, North Indian, Asian"
+}
+
+const Body = () => {
+    return (
+        <div className="body">
+            <div className="search">Search</div>
+            <div className="restaurant-container">
+                <RestaurantCard {...restaurantDataJson} />
+            </div>
+        </div>
+    )
+}
+
+--------> other way 2
+
+const RestaurantCard = ({restaurantName, cusine}) => {
+    return (
+        <div className="restaurant-card">
+            <img className="restaurant-logo"
+            alt="restaurant-logo"
+            src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/gp1ityra6utvzqn6ghnv"
+            ></img>
+            <h3 className="restaurant-name">{restaurantName}</h3>
+            <h4>{cusine}</h4>
+        </div>
+    )
+}
+
+const restaurantDataJson = {
+    restaurantName : "Meghana Foods",
+    cusine : "Biryani, North Indian, Asian"
+}
+
+const Body = () => {
+    return (
+        <div className="body">
+            <div className="search">Search</div>
+            <div className="restaurant-container">
+                <RestaurantCard {...restaurantDataJson} />
+            </div>
+        </div>
+    )
+}
+
+==========================
+whenever we use js map, we should give a key otherwise we will get warning
+if key is not used, React won't identify it
+while rendering it will render all in the list, if key is provided only the newly added will be rendered
+React itself says that using index as key is not recommended
+not using keys(not acceptable) <<<<<<<< index as key <<<<<<<<< unique id (best practice)
