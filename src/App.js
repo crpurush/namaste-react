@@ -1,22 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-/**
- * Main component list in App
- * Header
- * - Logo
- * - Nav Items
- * Body
- * - Search
- * - RestrauntContainer
- * - RestrauntCard
- *   - Img,
- *   - Name of Restaurant, Star Ratings, cuisine, delivery time
- * Footer
- * - Copyright
- * - Links
- * - Address
- * - Contact
- */
 
 const Header = () => {
     return (
