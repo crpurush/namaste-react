@@ -1,6 +1,6 @@
 const RestaurantCard = (props) => {
     const {resData} = props;
-    const {restaurantName, cusine, avgRating, expectedTimeToArrive, logoURL} = resData;
+    const {restaurantName, cusine, avgRating, expectedTimeToArrive, logoURL} = resData.data;
 
     return (
         <div className="restaurant-card">
