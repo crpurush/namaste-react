@@ -1,4 +1,4 @@
-const restaurantsList = [
+const resList = [
     {
         data: {
         id:"sds3232",
@@ -61,4 +61,4 @@ const restaurantsList = [
     },
 ]
 
-export default restaurantsList;
+export default resList;
