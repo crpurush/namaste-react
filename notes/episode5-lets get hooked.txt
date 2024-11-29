@@ -1,0 +1,51 @@
+Never put mock data in component folder
+Never use hardcoded strings in components files
+Move these to some common folder like utils folder and put in similar to constants file
+
+
+====================================
+-> Default Export/Import:
+    we can use default export when we have to export only one  thing from file
+    export default Component;
+    import Component from "path";
+    ex:
+    export default Body;
+    import Body from "./components/Body";
+
+-> NAMED Export/Import
+    but for more than two constants or functions we have to do NAMED EXPORT, using export before the variable to export
+    export const Component;
+    import {Component} from "path"
+    
+    ex:
+    export const CDN_URL
+    export const LOGO_URL
+
+    while importing
+    import { LOGO_URL } from "../utils/constants";
+====================================
+#################### React Hooks ###############################################
+
+Usually there are data layer and UI layer
+whenever data layer changes (i.e., JS variable) it won't directly refresh UI
+So, in React it is handled in a way when data changes -> it immediately updates UI by introducting State Variables
+we will use state variable in a React component, when stateVariable updates acts as DataLayer => it immediately updates component(UI Layer)
+
+-> A hook is normal JS function given by React
+  - Normal JS utility functions provided by React
+  2 Hooks
+    - useState() - used to create super powerful react(state) variables
+    - useEffect()
+ to use, we have to import from react library as named import
+-> State variable is super powerful variables provided by React and are used in React
+whenever state variable changes, React re-renders the CompositionEvent
+
+let resList = [] //normal JS
+const [resList] = useState([]) //useState syntax for above
+===========================
+const [resList,setresList] = useState([]) //complete syntax for state variable
+resList = ['apple','mango'] //for updating normal JS variable
+setresList(['apple','mango']) //for updating state variable
+
+Rules for useState variable => should be declared inside the component only not outside.
+

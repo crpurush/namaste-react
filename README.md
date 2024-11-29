@@ -39,3 +39,11 @@ https://parceljs.org/ - official website for parcel
  * - Address
  * - Contact
  */
+
+# React Hooks
+- Normal JS utility functions provided by React
+2 Hooks
+ - useState() - used to create super powerful react(state) variables
+ - useEffect()
+to use, we have to import from react library as named import
+

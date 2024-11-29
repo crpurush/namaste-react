@@ -46,6 +46,9 @@
     margin: 5px;
 }
 
-.search {
+.filter-btn {
     padding: 10px;
+    cursor: pointer;
+    padding: 20px;
+    margin: 10px;
 }
