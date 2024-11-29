@@ -1,0 +1,27 @@
+Never put mock data in component folder
+Never use hardcoded strings in components files
+Move these to some common folder like utils folder and put in similar to constants file
+
+
+====================================
+-> Default Export/Import:
+    we can use default export when we have to export only one  thing from file
+    export default Component;
+    import Component from "path";
+    ex:
+    export default Body;
+    import Body from "./components/Body";
+
+-> NAMED Export/Import
+    but for more than two constants or functions we have to do NAMED EXPORT, using export before the variable to export
+    export const Component;
+    import {Component} from "path"
+    
+    ex:
+    export const CDN_URL
+    export const LOGO_URL
+
+    while importing
+    import { LOGO_URL } from "../utils/constants";
+====================================
+#################### React Hooks ###############################################

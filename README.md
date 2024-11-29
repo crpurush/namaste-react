@@ -21,3 +21,21 @@ https://parceljs.org/ - official website for parcel
 - Tree shaking -> remove unused code
 - Different Dev and prod builds
 
+# Namaste Food App
+/**
+ * Main component list in App
+ * Header
+ * - Logo
+ * - Nav Items
+ * Body
+ * - Search
+ * - RestrauntContainer
+ * - RestrauntCard
+ *   - Img,
+ *   - Name of Restaurant, Star Ratings, cuisine, delivery time
+ * Footer
+ * - Copyright
+ * - Links
+ * - Address
+ * - Contact
+ */
